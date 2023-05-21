@@ -1,0 +1,413 @@
+import Navbar from "../component/Navbar";
+import Image from "../assets/Image";
+import CardIntro from "../component/CardIntro";
+import CardProject from "../component/CardProject";
+
+export default function LandingPage() {
+  return (
+    <>
+      {/* Header */}
+      <header className="bg-gradient-to-b from-[#ECE9FF] to-[#F1FDFF] px-[30px] md:px-[100px]">
+        <Navbar />
+        <div className="flex flex-col items-center text-center mt-8 md:flex-row md:justify-around md:text-start md:items-start">
+          <h1 className="text-primary font-righteous text-3xl md:text-5xl md:order-1 md:mt-20 md:w-[300px]">
+            Halo,<br></br> Saya Farhan
+          </h1>
+          <p
+            className="text-hitam font-robotomono text-base mt-2 md:order-3 md:mt-24 md:w-[300px] md:text-3xl md:text-center
+          "
+          >
+            Junior <br className="hidden md:block" /> Front End Web
+          </p>
+          <div className="flex justify-center mt-2 md:order-2">
+            <img
+              className="h-[303px] md:h-[500px]"
+              src={Image.fotoProfile}
+              alt="Foto Farhan"
+            />
+          </div>
+        </div>
+      </header>
+
+      {/* perkenalan */}
+      <section
+        id="perkenalan"
+        className="px-[30px] md:px-[100px] md:py-[70px]  mt-10"
+      >
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+          <div className="text-center md:text-start">
+            <h1 className="font-righteous text-primary text-2xl md:text-3xl">
+              Perkenalkan
+            </h1>
+            <p className="font-robotomono text-hitam text-[15px] mt-3 md:text-lg">
+              Saya Farhan Abdurrahman Zain, panggilan saya Farhan, saya
+              mahasiswa teknik informatika dari Politeknik Negeri Batam, saya
+              tinggal di Batam, Kepulauan Riau. saya sedang mendalami web
+              development khususnya bagian front end.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 gap-4 justify-items-center md:grid-cols-2">
+            <CardIntro
+              Icon={
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 256"
+                  className="text-primary w-[35px] h-[35px] md:w-[50px] md:h-[50px]"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M128 24a104 104 0 1 0 104 104A104.13 104.13 0 0 0 128 24Zm40 112h-32v32a8 8 0 0 1-16 0v-32H88a8 8 0 0 1 0-16h32V88a8 8 0 0 1 16 0v32h32a8 8 0 0 1 0 16Z"
+                  />
+                </svg>
+              }
+              Text="Bertanggung Jawab"
+            />
+            <CardIntro
+              Icon={
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 256"
+                  className="text-primary w-[35px] h-[35px] md:w-[50px] md:h-[50px]"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M128 24a104 104 0 1 0 104 104A104.13 104.13 0 0 0 128 24Zm40 112h-32v32a8 8 0 0 1-16 0v-32H88a8 8 0 0 1 0-16h32V88a8 8 0 0 1 16 0v32h32a8 8 0 0 1 0 16Z"
+                  />
+                </svg>
+              }
+              Text="Mau Belajar"
+            />
+            <CardIntro
+              Icon={
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="text-secondary w-[35px] h-[35px] md:w-[50px] md:h-[50px]"
+                  viewBox="0 0 256 256"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M128 24a104 104 0 1 0 104 104A104.11 104.11 0 0 0 128 24Zm40 112H88a8 8 0 0 1 0-16h80a8 8 0 0 1 0 16Z"
+                  />
+                </svg>
+              }
+              Text="Pembelajar yang lambat"
+            />
+            <CardIntro
+              Icon={
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="text-secondary w-[35px] h-[35px] md:w-[50px] md:h-[50px]"
+                  viewBox="0 0 256 256"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M128 24a104 104 0 1 0 104 104A104.11 104.11 0 0 0 128 24Zm40 112H88a8 8 0 0 1 0-16h80a8 8 0 0 1 0 16Z"
+                  />
+                </svg>
+              }
+              Text="Short Term Memory"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Pengalaman */}
+      <section className="px-[30px] py-[20px] md:px-[100px] md:py-[70px] mt-10 bg-gradient-to-b from-[#F1FDFF] to-[#ECE9FF]">
+        <h1 className="font-righteous text-primary text-2xl md:text-3xl mb-2 text-center md:text-start">
+          Pengalaman
+        </h1>
+        <ol className="relative border-l border-gray-300">
+          <li className="ml-4">
+            <div className="absolute w-3 h-3 bg-gray-300 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+            <time className="mb-1 text-xs md:text-sm font-robotomono text-hitam">
+              Februari - Juni 2023
+            </time>
+            <h3 className="text-base md:text-xl font-righteous text-hitam">
+              Studi Independen Web Development
+            </h3>
+            <p className="text-sm md:text-lg font-robotomono text-hitam">
+              Program MSIB kampus merdeka di mitra Infinite Learning Indonesia,
+              mempelajari Web Development seperti UI/UX design, Frontend web,
+              Backend web, dan softskill seperti leadership, public speaking,
+              dan management team.
+            </p>
+          </li>
+        </ol>
+      </section>
+
+      {/* Skill */}
+      <section
+        id="skill"
+        className="px-[30px] py-[20px] md:px-[100px] md:py-[70px] mt-10"
+      >
+        <h1 className="font-righteous text-primary text-2xl md:text-3xl mb-2 text-center">
+          Skill
+        </h1>
+        <div className="flex flex-col text-center mt-5 md:flex-row md:items-start md:text-start md:justify-between md:mt-10">
+          <div className="md:w-[520px]">
+            <h2 className="text-hitam font-righteous text-xl md:text-2xl">
+              Front End Web
+            </h2>
+            <p className="text-hitam font-robotomono text-[15px] md:text-lg mt-2">
+              Pada front end web, saya biasa menggunakan HTML dan CSS, untuk JS,
+              React JS, dan Tailwind saya pernah menggunakannya dan masih
+              mempelajari lebih dalam.
+            </p>
+            <div className="flex justify-between items-center mt-4 md:justify-start md:gap-8">
+              {/* html */}
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-[35px] h-[35px] md:w-[50px] md:h-[50px]"
+                  viewBox="0 0 256 256"
+                >
+                  <g fill="none">
+                    <rect width="256" height="256" fill="#E14E1D" rx="60" />
+                    <path
+                      fill="#fff"
+                      d="m48 38l8.61 96.593h110.71l-3.715 41.43l-35.646 9.638l-35.579-9.624l-2.379-26.602H57.94l4.585 51.281l65.427 18.172l65.51-18.172l8.783-98.061H85.824l-2.923-32.71h122.238L208 38H48Z"
+                    />
+                    <path
+                      fill="#EBEBEB"
+                      d="M128 38H48l8.61 96.593H128v-31.938H85.824l-2.923-32.71H128V38Zm0 147.647l-.041.014l-35.579-9.624l-2.379-26.602H57.94l4.585 51.281l65.427 18.172l.049-.014v-33.227Z"
+                    />
+                  </g>
+                </svg>
+              </div>
+              {/* css */}
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-[35px] h-[35px] md:w-[50px] md:h-[50px]"
+                  viewBox="0 0 256 256"
+                >
+                  <g fill="none">
+                    <rect width="256" height="256" fill="#0277BD" rx="60" />
+                    <path
+                      fill="#EBEBEB"
+                      d="m53.753 102.651l2.862 31.942h71.481v-31.942H53.753ZM128.095 38H48l2.904 31.942h77.191V38Zm0 180.841v-33.233l-.14.037l-35.574-9.605l-2.274-25.476H58.042l4.475 50.154l65.431 18.164l.147-.041Z"
+                    />
+                    <path
+                      fill="#fff"
+                      d="m167.318 134.593l-3.708 41.426l-35.625 9.616v33.231l65.483-18.148l.48-5.397l7.506-84.092l.779-8.578L208 38h-80.015v31.942h45.009l-2.906 32.709h-42.103v31.942h39.333Z"
+                    />
+                  </g>
+                </svg>
+              </div>
+              {/* JS */}
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-[35px] h-[35px] md:w-[50px] md:h-[50px]"
+                  viewBox="0 0 256 256"
+                >
+                  <g fill="none">
+                    <rect width="256" height="256" fill="#F0DB4F" rx="60" />
+                    <path
+                      fill="#323330"
+                      d="m67.312 213.932l19.59-11.856c3.78 6.701 7.218 12.371 15.465 12.371c7.905 0 12.889-3.092 12.889-15.12v-81.798h24.058v82.138c0 24.917-14.606 36.259-35.916 36.259c-19.245 0-30.416-9.967-36.087-21.996m85.07-2.576l19.588-11.341c5.157 8.421 11.859 14.607 23.715 14.607c9.969 0 16.325-4.984 16.325-11.858c0-8.248-6.53-11.17-17.528-15.98l-6.013-2.579c-17.357-7.388-28.871-16.668-28.871-36.258c0-18.044 13.748-31.792 35.229-31.792c15.294 0 26.292 5.328 34.196 19.247l-18.731 12.029c-4.125-7.389-8.591-10.31-15.465-10.31c-7.046 0-11.514 4.468-11.514 10.31c0 7.217 4.468 10.139 14.778 14.608l6.014 2.577c20.449 8.765 31.963 17.699 31.963 37.804c0 21.654-17.012 33.51-39.867 33.51c-22.339 0-36.774-10.654-43.819-24.574"
+                    />
+                  </g>
+                </svg>
+              </div>
+              {/* React */}
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-[35px] h-[35px] md:w-[50px] md:h-[50px]"
+                  viewBox="0 0 256 256"
+                >
+                  <g fill="none">
+                    <rect width="256" height="256" fill="#242938" rx="60" />
+                    <path
+                      fill="#00D8FF"
+                      d="M128.001 146.951c10.304 0 18.656-8.353 18.656-18.656c0-10.303-8.352-18.656-18.656-18.656c-10.303 0-18.656 8.353-18.656 18.656c0 10.303 8.353 18.656 18.656 18.656Z"
+                    />
+                    <path
+                      stroke="#00D8FF"
+                      strokeWidth="8.911"
+                      d="M128.002 90.363c25.048 0 48.317 3.594 65.862 9.635C215.003 107.275 228 118.306 228 128.295c0 10.409-13.774 22.128-36.475 29.649c-17.162 5.686-39.746 8.654-63.523 8.654c-24.378 0-47.463-2.786-64.819-8.717C41.225 150.376 28 138.506 28 128.295c0-9.908 12.41-20.854 33.252-28.12c17.61-6.14 41.453-9.812 66.746-9.812h.004Z"
+                      clipRule="evenodd"
+                    />
+                    <path
+                      stroke="#00D8FF"
+                      strokeWidth="8.911"
+                      d="M94.981 109.438c12.514-21.698 27.251-40.06 41.249-52.24c16.864-14.677 32.914-20.425 41.566-15.436c9.017 5.2 12.288 22.988 7.463 46.41c-3.645 17.707-12.359 38.753-24.238 59.351c-12.179 21.118-26.124 39.724-39.931 51.792c-17.471 15.272-34.362 20.799-43.207 15.698c-8.583-4.946-11.865-21.167-7.747-42.852c3.479-18.323 12.21-40.812 24.841-62.723h.004Z"
+                      clipRule="evenodd"
+                    />
+                    <path
+                      stroke="#00D8FF"
+                      strokeWidth="8.911"
+                      d="M95.012 147.578c-12.549-21.674-21.093-43.616-24.659-61.826c-4.293-21.941-1.258-38.716 7.387-43.72c9.009-5.216 26.052.834 43.934 16.712c13.52 12.004 27.403 30.061 39.316 50.639c12.214 21.098 21.368 42.473 24.929 60.461c4.506 22.764.859 40.157-7.978 45.272c-8.574 4.964-24.265-.291-40.996-14.689c-14.136-12.164-29.26-30.959-41.933-52.849Z"
+                      clipRule="evenodd"
+                    />
+                  </g>
+                </svg>
+              </div>
+              {/* tailwind */}
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-[35px] h-[35px] md:w-[50px] md:h-[50px]"
+                  viewBox="0 0 256 256"
+                >
+                  <g fill="none">
+                    <rect width="256" height="256" fill="#242938" rx="60" />
+                    <path
+                      fill="url(#skillIconsTailwindcssDark0)"
+                      fillRule="evenodd"
+                      d="M83 110c6-24 21.001-36 45-36c36 0 40.5 27 58.5 31.5c12.001 3.001 22.5-1.499 31.5-13.5c-5.999 23.999-21.001 36-45 36c-36 0-40.5-27-58.5-31.5C102.499 93.5 92 98 83 110Zm-45 54c6-23.999 21-36 45-36c36 0 40.5 27 58.5 31.5c12.001 3.001 22.5-1.499 31.5-13.5c-5.999 23.999-21.001 36-45 36c-36 0-40.5-27-58.5-31.5c-12-3.001-22.5 1.499-31.5 13.5Z"
+                      clipRule="evenodd"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="skillIconsTailwindcssDark0"
+                        x1="86.5"
+                        x2="163.5"
+                        y1="74"
+                        y2="185.5"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stopColor="#32B1C1" />
+                        <stop offset="1" stopColor="#14C6B7" />
+                      </linearGradient>
+                    </defs>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div className="mt-12 md:mt-0 md:w-[520px]">
+            <h2 className="text-hitam font-righteous text-xl md:text-2xl">
+              UI Design
+            </h2>
+            <p className="text-hitam font-robotomono text-[15px] md:text-lg mt-2">
+              Pada design user interface saya biasa menggunakan Figma.
+            </p>
+            <div className="flex justify-center mt-4 md:justify-start">
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-[35px] h-[35px] md:w-[50px] md:h-[50px]"
+                  viewBox="0 0 256 256"
+                >
+                  <g fill="none">
+                    <rect width="256" height="256" fill="#242938" rx="60" />
+                    <g clipPath="url(#skillIconsFigmaDark0)">
+                      <path
+                        fill="#0ACF83"
+                        d="M94.347 228c18.4 0 33.333-14.933 33.333-33.333v-33.334H94.347c-18.4 0-33.334 14.934-33.334 33.334c0 18.4 14.934 33.333 33.334 33.333Z"
+                      />
+                      <path
+                        fill="#A259FF"
+                        d="M61.013 128c0-18.4 14.934-33.333 33.334-33.333h33.333v66.666H94.347c-18.4 0-33.334-14.933-33.334-33.333Z"
+                      />
+                      <path
+                        fill="#F24E1E"
+                        d="M61.013 61.333C61.013 42.933 75.947 28 94.347 28h33.333v66.667H94.347c-18.4 0-33.334-14.934-33.334-33.334Z"
+                      />
+                      <path
+                        fill="#FF7262"
+                        d="M127.68 28h33.333c18.4 0 33.334 14.933 33.334 33.333s-14.934 33.334-33.334 33.334H127.68V28Z"
+                      />
+                      <path
+                        fill="#1ABCFE"
+                        d="M194.347 128c0 18.4-14.934 33.333-33.334 33.333c-18.4 0-33.333-14.933-33.333-33.333s14.933-33.333 33.333-33.333S194.347 109.6 194.347 128Z"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="skillIconsFigmaDark0">
+                        <path fill="#fff" d="M61 28h133.36v200H61z" />
+                      </clipPath>
+                    </defs>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Project */}
+      <section
+        id="project"
+        className="px-[30px] py-[20px] md:px-[100px] md:py-[100px] mt-10"
+      >
+        <h1 className="font-righteous text-primary text-2xl md:text-3xl text-center md:text-start">
+          Project <br className="md:hidden" /> yang pernah dibuat
+        </h1>
+        <div className="flex flex-wrap gap-5 justify-center items-center mt-7 md:flex-row md:justify-between">
+          <CardProject Judul="Slicing Design" />
+          <CardProject Judul="Slicing Design" />
+          <CardProject Judul="Slicing Design" />
+          <CardProject Judul="Slicing Design" />
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer
+        id="kontak"
+        className="px-[30px] py-[30px] md:px-[100px] md:py-[70px] mt-10 bg-gradient-to-b from-[#ECE9FF] to-[#F1FDFF]"
+      >
+        <div className="flex flex-col items-center gap-12 md:flex-row md:justify-between">
+          <h1 className="text-primary font-pacifico text-4xl md:text-5xl">
+            Farhan
+          </h1>
+          <p className="font-robotomono text-[15px] md:text-2xl text-center md:w-[300px] md:text-start">
+            "Kegagalan adalah jalan memutar, bukan jalan buntu."
+          </p>
+          <div className="flex flex-col items-center md:items-start gap-5 font-robotomono text-sm md:text-xl">
+            {/* telp */}
+            <div className="flex flex-col items-center gap-2 md:flex-row">
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-[35px] h-[35px] md:w-[50px] md:h-[50px] text-primary"
+                  viewBox="0 0 1536 1536"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M1280 1065q0-11-2-16t-18-16.5t-40.5-25T1172 981t-45.5-25t-28.5-15q-5-3-19-13t-25-15t-21-5q-15 0-36.5 20.5t-39.5 45t-38.5 45T885 1039q-7 0-16.5-3.5T853 1029t-17-9.5t-14-8.5q-99-55-170-126.5T525 714q-2-3-8.5-14t-9.5-17t-6.5-15.5T497 651q0-13 20.5-33.5t45-38.5t45-39.5T628 503q0-10-5-21t-15-25t-13-19q-3-6-15-28.5T555 364t-26.5-47.5t-25-40.5t-16.5-18t-16-2q-48 0-101 22q-46 21-80 94.5T256 503q0 16 2.5 34t5 30.5t9 33t10 29.5t12.5 33t11 30q60 164 216.5 320.5T843 1230q6 2 30 11t33 12.5t29.5 10t33 9t30.5 5t34 2.5q57 0 130.5-34t94.5-80q22-53 22-101zm256-777v960q0 119-84.5 203.5T1248 1536H288q-119 0-203.5-84.5T0 1248V288Q0 169 84.5 84.5T288 0h960q119 0 203.5 84.5T1536 288z"
+                  />
+                </svg>
+              </div>
+              <p>+6285293472288</p>
+            </div>
+            {/* email */}
+            <div className="flex flex-col items-center gap-2 md:flex-row">
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-[35px] h-[35px] md:w-[50px] md:h-[50px] text-primary"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M13.333 0H2.667A2.675 2.675 0 0 0 0 2.667v10.666C0 14.8 1.2 16 2.667 16h10.666C14.801 16 16 14.8 16 13.333V2.667A2.674 2.674 0 0 0 13.333 0zM4 4h8c.143 0 .281.031.409.088L8 9.231L3.591 4.088A.982.982 0 0 1 4 4zm-1 7V5l.002-.063l2.932 3.421l-2.9 2.9A.967.967 0 0 1 3 11zm9 1H4c-.088 0-.175-.012-.258-.034L6.588 9.12l1.413 1.648L9.414 9.12l2.846 2.846a.967.967 0 0 1-.258.034zm1-1c0 .088-.012.175-.034.258l-2.9-2.9l2.932-3.421L13 5v6z"
+                  />
+                </svg>
+              </div>
+              <p>farhanabdurrahmanzain@gmail.com</p>
+            </div>
+            {/* linked in */}
+            <div className="flex flex-col items-center gap-2 md:flex-row">
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-[35px] h-[35px] md:w-[50px] md:h-[50px] text-primary"
+                  viewBox="0 0 1536 1536"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M237 1286h231V592H237v694zm246-908q-1-52-36-86t-93-34t-94.5 34t-36.5 86q0 51 35.5 85.5T351 498h1q59 0 95-34.5t36-85.5zm585 908h231V888q0-154-73-233t-193-79q-136 0-209 117h2V592H595q3 66 0 694h231V898q0-38 7-56q15-35 45-59.5t74-24.5q116 0 116 157v371zm468-998v960q0 119-84.5 203.5T1248 1536H288q-119 0-203.5-84.5T0 1248V288Q0 169 84.5 84.5T288 0h960q119 0 203.5 84.5T1536 288z"
+                  />
+                </svg>
+              </div>
+              <p>Farhan Abdurrahman Zain</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </>
+  );
+}
