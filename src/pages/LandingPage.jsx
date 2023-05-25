@@ -39,7 +39,7 @@ export default function LandingPage() {
             <h1 className="font-righteous text-primary text-2xl md:text-3xl">
               Perkenalkan
             </h1>
-            <p className="font-robotomono text-hitam text-[15px] mt-3 md:text-lg">
+            <p className="font-robotomono text-hitam text-[15px] mt-3 md:text-base">
               Saya Farhan Abdurrahman Zain, panggilan saya Farhan, saya
               mahasiswa teknik informatika dari Politeknik Negeri Batam, saya
               tinggal di Batam, Kepulauan Riau. saya sedang mendalami web
@@ -125,7 +125,7 @@ export default function LandingPage() {
             <h3 className="text-base md:text-xl font-righteous text-hitam">
               Studi Independen Web Development
             </h3>
-            <p className="text-sm md:text-lg font-robotomono text-hitam">
+            <p className="text-sm md:text-base font-robotomono text-hitam">
               Program MSIB kampus merdeka di mitra Infinite Learning Indonesia,
               mempelajari Web Development seperti UI/UX design, Frontend web,
               Backend web, dan softskill seperti leadership, public speaking,
@@ -148,7 +148,7 @@ export default function LandingPage() {
             <h2 className="text-hitam font-righteous text-xl md:text-2xl">
               Front End Web
             </h2>
-            <p className="text-hitam font-robotomono text-[15px] md:text-lg mt-2">
+            <p className="text-hitam font-robotomono text-[15px] md:text-base mt-2">
               Pada front end web, saya biasa menggunakan HTML dan CSS, untuk JS,
               React JS, dan Tailwind saya pernah menggunakannya dan masih
               mempelajari lebih dalam.
@@ -281,7 +281,7 @@ export default function LandingPage() {
             <h2 className="text-hitam font-righteous text-xl md:text-2xl">
               UI Design
             </h2>
-            <p className="text-hitam font-robotomono text-[15px] md:text-lg mt-2">
+            <p className="text-hitam font-robotomono text-[15px] md:text-base mt-2">
               Pada design user interface saya biasa menggunakan Figma.
             </p>
             <div className="flex justify-center mt-4 md:justify-start">
@@ -353,10 +353,10 @@ export default function LandingPage() {
           <h1 className="text-primary font-pacifico text-4xl md:text-5xl">
             Farhan
           </h1>
-          <p className="font-robotomono text-[15px] md:text-2xl text-center md:w-[300px] md:text-start">
+          <p className="font-robotomono text-[15px] md:text-xl text-center md:w-[300px] md:text-start">
             "Kegagalan adalah jalan memutar, bukan jalan buntu."
           </p>
-          <div className="flex flex-col items-center md:items-start gap-5 font-robotomono text-sm md:text-xl">
+          <div className="flex flex-col items-center md:items-start gap-5 font-robotomono text-sm md:text-lg">
             {/* telp */}
             <div className="flex flex-col items-center gap-2 md:flex-row">
               <div>

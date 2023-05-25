@@ -1,4 +1,10 @@
+import { useState } from "react";
+
 export default function Navbar() {
+  const [showMenu, setShowMenu] = useState(false);
+  function toggleMenu() {
+    setShowMenu(!showMenu);
+  }
   return (
     <>
       <nav className="bg-transparent">
@@ -9,6 +15,7 @@ export default function Navbar() {
             </span>
           </a>
           <button
+            onClick={() => toggleMenu()}
             data-collapse-toggle="navbar-dropdown"
             type="button"
             className="inline-flex items-center p-2 ml-3 text-sm rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
@@ -31,14 +38,16 @@ export default function Navbar() {
             </svg>
           </button>
           <div
-            className="hidden w-full md:block md:w-auto"
+            className={` w-full md:block md:w-auto ${
+              !showMenu ? "hidden" : ""
+            }`}
             id="navbar-dropdown"
           >
-            <ul className="flex flex-col items-center font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-transparent md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent">
+            <ul className="flex flex-col items-center font-medium p-4 md:p-0 mt-4 rounded-lg bg-transparent md:flex-row md:space-x-2 md:mt-0 md:bg-transparent">
               <li>
                 <a
                   href="#perkenalan"
-                  className="block py-2 pl-3 pr-4 font-righteous text-primary text-xl  md:p-0 "
+                  className="block py-2 px-4 font-righteous text-primary text-xl rounded-lg hover:bg-primary hover:text-white  "
                   aria-current="page"
                 >
                   Me !
@@ -47,7 +56,7 @@ export default function Navbar() {
               <li>
                 <a
                   href="#skill"
-                  className="block py-2 pl-3 pr-4 font-righteous text-primary text-xl  md:p-0 "
+                  className="block py-2 px-4 font-righteous text-primary text-xl rounded-lg hover:bg-primary hover:text-white"
                   aria-current="page"
                 >
                   Skill
@@ -56,7 +65,7 @@ export default function Navbar() {
               <li>
                 <a
                   href="#project"
-                  className="block py-2 pl-3 pr-4 font-righteous text-primary text-xl md:p-0 "
+                  className="block py-2 px-4 font-righteous text-primary text-xl rounded-lg hover:bg-primary hover:text-white"
                   aria-current="page"
                 >
                   Project
@@ -65,7 +74,7 @@ export default function Navbar() {
               <li>
                 <a
                   href="#kontak"
-                  className="block py-2 pl-3 pr-4 font-righteous text-primary text-xl md:p-0 "
+                  className="block py-2 px-4 font-righteous text-primary text-xl rounded-lg hover:bg-primary hover:text-white"
                   aria-current="page"
                 >
                   Kontak
