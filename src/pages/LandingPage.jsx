@@ -2,8 +2,31 @@ import Navbar from "../component/Navbar";
 import Image from "../assets/Image";
 import CardIntro from "../component/CardIntro";
 import CardProject from "../component/CardProject";
+import Modal from "../component/Modal";
+import Data from "./Data";
 
 export default function LandingPage() {
+  const cardFe = Data.map((cardFe) => (
+    <CardProject
+      key={cardFe.id}
+      gambar={cardFe.gambar}
+      modalID={cardFe.id}
+      Judul={cardFe.judul}
+    />
+  ));
+  const modalFe = Data.map((modalFe) => (
+    <Modal
+      key={modalFe.id}
+      modalID={modalFe.id}
+      gambar={modalFe.gambar}
+      judul={modalFe.judul}
+      deskripsi={modalFe.deskripsi}
+      responsive={modalFe.responsive}
+      tech={modalFe.tech}
+      github={modalFe.github}
+      web={modalFe.web}
+    />
+  ));
   return (
     <>
       {/* Header */}
@@ -36,7 +59,7 @@ export default function LandingPage() {
       >
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
           <div className="text-center md:text-start">
-            <h1 className="font-righteous text-primary text-2xl md:text-3xl">
+            <h1 className="font-righteous text-primary text-xl md:text-2xl">
               Perkenalkan
             </h1>
             <p className="font-robotomono text-hitam text-[15px] mt-3 md:text-base">
@@ -113,7 +136,7 @@ export default function LandingPage() {
 
       {/* Pengalaman */}
       <section className="px-[30px] py-[20px] md:px-[100px] md:py-[70px] mt-10 bg-gradient-to-b from-[#F1FDFF] to-[#ECE9FF]">
-        <h1 className="font-righteous text-primary text-2xl md:text-3xl mb-2 text-center md:text-start">
+        <h1 className="font-righteous text-primary text-xl md:text-2xl mb-2 text-center md:text-start">
           Pengalaman
         </h1>
         <ol className="relative border-l border-gray-300">
@@ -140,12 +163,12 @@ export default function LandingPage() {
         id="skill"
         className="px-[30px] py-[20px] md:px-[100px] md:py-[70px] mt-10"
       >
-        <h1 className="font-righteous text-primary text-2xl md:text-3xl mb-2 text-center">
+        <h1 className="font-righteous text-primary text-xl md:text-2xl mb-2 text-center">
           Skill
         </h1>
         <div className="flex flex-col text-center mt-5 md:flex-row md:items-start md:text-start md:justify-between md:mt-10">
           <div className="md:w-[520px]">
-            <h2 className="text-hitam font-righteous text-xl md:text-2xl">
+            <h2 className="text-hitam font-righteous text-lg md:text-xl">
               Front End Web
             </h2>
             <p className="text-hitam font-robotomono text-[15px] md:text-base mt-2">
@@ -278,7 +301,7 @@ export default function LandingPage() {
             </div>
           </div>
           <div className="mt-12 md:mt-0 md:w-[520px]">
-            <h2 className="text-hitam font-righteous text-xl md:text-2xl">
+            <h2 className="text-hitam font-righteous text-lg md:text-xl">
               UI Design
             </h2>
             <p className="text-hitam font-robotomono text-[15px] md:text-base mt-2">
@@ -328,19 +351,17 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Project */}
+      {/* Project front end */}
       <section
         id="project"
-        className="px-[30px] py-[20px] md:px-[100px] md:py-[100px] mt-10"
+        className="px-[30px] py-[20px] md:px-[100px] md:py-[100px]"
       >
-        <h1 className="font-righteous text-primary text-2xl md:text-3xl text-center md:text-start">
-          Project <br className="md:hidden" /> yang pernah dibuat
+        <h1 className="font-righteous text-primary text-xl md:text-2xl text-center md:text-start">
+          Project <br className="md:hidden" /> Front-end
         </h1>
-        <div className="flex flex-wrap gap-5 justify-center items-center mt-7 md:flex-row md:justify-between">
-          <CardProject Judul="Slicing Design" />
-          <CardProject Judul="Slicing Design" />
-          <CardProject Judul="Slicing Design" />
-          <CardProject Judul="Slicing Design" />
+        <div className="flex flex-wrap gap-5 justify-center items-start mt-7 md:flex-row md:justify-start">
+          {cardFe}
+          {modalFe}
         </div>
       </section>
 
@@ -362,7 +383,7 @@ export default function LandingPage() {
               <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-[35px] h-[35px] md:w-[50px] md:h-[50px] text-primary"
+                  className="w-[35px] h-[35px] md:w-[40px] md:h-[40px] text-primary"
                   viewBox="0 0 1536 1536"
                 >
                   <path
@@ -378,7 +399,7 @@ export default function LandingPage() {
               <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-[35px] h-[35px] md:w-[50px] md:h-[50px] text-primary"
+                  className="w-[35px] h-[35px] md:w-[40px] md:h-[40px] text-primary"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -394,7 +415,7 @@ export default function LandingPage() {
               <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-[35px] h-[35px] md:w-[50px] md:h-[50px] text-primary"
+                  className="w-[35px] h-[35px] md:w-[40px] md:h-[40px] text-primary"
                   viewBox="0 0 1536 1536"
                 >
                   <path
