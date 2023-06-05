@@ -10,21 +10,12 @@ export default function LandingPage() {
     <CardProject
       key={cardFe.id}
       gambar={cardFe.gambar}
-      modalID={cardFe.id}
       Judul={cardFe.judul}
-    />
-  ));
-  const modalFe = Data.map((modalFe) => (
-    <Modal
-      key={modalFe.id}
-      modalID={modalFe.id}
-      gambar={modalFe.gambar}
-      judul={modalFe.judul}
-      deskripsi={modalFe.deskripsi}
-      responsive={modalFe.responsive}
-      tech={modalFe.tech}
-      github={modalFe.github}
-      web={modalFe.web}
+      deskripsi={cardFe.deskripsi}
+      responsive={cardFe.responsive}
+      tech={cardFe.tech}
+      github={cardFe.github}
+      web={cardFe.web}
     />
   ));
   return (
@@ -361,7 +352,6 @@ export default function LandingPage() {
         </h1>
         <div className="flex flex-wrap gap-5 justify-center items-start mt-7 md:flex-row md:justify-start">
           {cardFe}
-          {modalFe}
         </div>
       </section>
 

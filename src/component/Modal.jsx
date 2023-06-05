@@ -1,22 +1,27 @@
-export default function Modal(props) {
+export default function Modal({ open, onClose, children }) {
   return (
     <>
       {/* <!-- Main modal --> */}
       <div
-        id={props.modalID}
-        tabIndex="-1"
-        aria-hidden="true"
-        className="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
+        // id={props.modalID}
+        onClick={onClose}
+        className={`fixed inset-0 flex justify-center items-center z-50 bg-black bg-opacity-50 backdrop-blur w-full p-4 overflow-x-hidden overflow-y-auto h-full ${
+          open ? "visible" : "invisible"
+        } `}
       >
-        <div className="relative w-full max-w-2xl max-h-full">
+        <div
+          onClick={(e) => e.stopPropagation()}
+          className="relative w-full max-w-2xl max-h-full"
+        >
           {/* <!-- Modal content --> */}
           <div className="relative bg-white rounded-lg shadow">
             {/* <!-- Modal header --> */}
             <div className="flex items-start justify-between p-4 rounded-t ">
               <button
+                onClick={onClose}
                 type="button"
-                className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
-                data-modal-hide={props.modalID}
+                className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center "
+                // data-modal-hide={props.modalID}
               >
                 <svg
                   aria-hidden="true"
@@ -34,8 +39,9 @@ export default function Modal(props) {
                 <span className="sr-only">Close modal</span>
               </button>
             </div>
+
             {/* <!-- Modal body --> */}
-            <div className="p-6 space-y-3">
+            {/* <div className="p-6 space-y-3">
               <img className="w-full rounded-lg" src={props.gambar} alt="" />
               <h1 className="text-lg font-righteous font-medium">
                 {props.judul}
@@ -49,9 +55,10 @@ export default function Modal(props) {
               <p className="text-base font-robotomono leading-relaxed text-black ">
                 {props.tech}
               </p>
-            </div>
+            </div> */}
+
             {/* <!-- Modal footer --> */}
-            <div className="flex items-center justify-end p-6 space-x-2 rounded-b">
+            {/* <div className="flex items-center justify-end p-6 space-x-2 rounded-b">
               <a
                 href={props.github}
                 target="_blank"
@@ -68,7 +75,9 @@ export default function Modal(props) {
               >
                 Kunjungi
               </a>
-            </div>
+            </div> */}
+
+            {children}
           </div>
         </div>
       </div>
