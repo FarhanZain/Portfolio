@@ -30,6 +30,9 @@ export default function CardProject(props) {
           <h1 className="text-lg font-righteous font-medium">{props.Judul}</h1>
           <p className="text-base font-robotomono leading-relaxed text-black ">
             {props.deskripsi}
+            <a href={props.href} target="_blank">
+              {props.href}
+            </a>
           </p>
           <p className="text-base font-robotomono leading-relaxed text-black ">
             {props.responsive}

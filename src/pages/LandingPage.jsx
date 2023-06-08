@@ -12,6 +12,7 @@ export default function LandingPage() {
       gambar={cardFe.gambar}
       Judul={cardFe.judul}
       deskripsi={cardFe.deskripsi}
+      href={cardFe.href}
       responsive={cardFe.responsive}
       tech={cardFe.tech}
       github={cardFe.github}
