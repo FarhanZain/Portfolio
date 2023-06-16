@@ -4,6 +4,8 @@ import CardIntro from "../component/CardIntro";
 import CardProject from "../component/CardProject";
 import Modal from "../component/Modal";
 import Data from "./Data";
+import DataUI from "./DataUI";
+import CardUI from "../component/CardUI";
 
 export default function LandingPage() {
   const cardFe = Data.map((cardFe) => (
@@ -17,6 +19,15 @@ export default function LandingPage() {
       tech={cardFe.tech}
       github={cardFe.github}
       web={cardFe.web}
+    />
+  ));
+  const cardUI = DataUI.map((cardUI) => (
+    <CardUI
+      key={cardUI.id}
+      gambar={cardUI.gambar}
+      Judul={cardUI.judul}
+      deskripsi={cardUI.deskripsi}
+      figma={cardUI.figma}
     />
   ));
   return (
@@ -146,6 +157,9 @@ export default function LandingPage() {
               Backend web, dan softskill seperti leadership, public speaking,
               dan management team.
             </p>
+            <p>- Micro Project sebagai UI/UX Designer (Hipster)</p>
+            <p>- Macro Project sebagai Coder Front-end (Hacker)</p>
+            <p>- Massive Project sebagai UI/UX Designer (Hipster)</p>
           </li>
         </ol>
       </section>
@@ -164,9 +178,9 @@ export default function LandingPage() {
               Front End Web
             </h2>
             <p className="text-hitam font-robotomono text-[15px] md:text-base mt-2">
-              Pada front end web, saya biasa menggunakan HTML dan CSS, untuk JS,
-              React JS, dan Tailwind saya pernah menggunakannya dan masih
-              mempelajari lebih dalam.
+              Mampu mebuat website pada bagian front-end, saya biasa menggunakan
+              HTML dan CSS, untuk JS, React JS, dan Tailwind saya bisa
+              menggunakannya dan masih mempelajari lebih dalam.
             </p>
             <div className="flex justify-between items-center mt-4 md:justify-start md:gap-8">
               {/* html */}
@@ -294,10 +308,11 @@ export default function LandingPage() {
           </div>
           <div className="mt-12 md:mt-0 md:w-[520px]">
             <h2 className="text-hitam font-righteous text-lg md:text-xl">
-              UI Design
+              UI/UX Design
             </h2>
             <p className="text-hitam font-robotomono text-[15px] md:text-base mt-2">
-              Pada design user interface saya biasa menggunakan Figma.
+              Mampu membuat sebuah UI/UX Design, dalam membuat sebuah UI/UX
+              design saya biasa menggunakan aplikasi Figma.
             </p>
             <div className="flex justify-center mt-4 md:justify-start">
               <div>
@@ -346,13 +361,22 @@ export default function LandingPage() {
       {/* Project front end */}
       <section
         id="project"
-        className="px-[30px] py-[20px] md:px-[100px] md:py-[100px]"
+        className="px-[30px] py-[20px] md:px-[100px] md:py-[60px]"
       >
         <h1 className="font-righteous text-primary text-xl md:text-2xl text-center md:text-start">
           Project <br className="md:hidden" /> Front-end
         </h1>
         <div className="flex flex-wrap gap-5 justify-center items-start mt-7 md:flex-row md:justify-start">
           {cardFe}
+        </div>
+      </section>
+      {/* Project Design UI */}
+      <section className="px-[30px] py-[20px] md:px-[100px] md:py-[60px]">
+        <h1 className="font-righteous text-primary text-xl md:text-2xl text-center md:text-start">
+          Project <br className="md:hidden" /> UI/UX
+        </h1>
+        <div className="flex flex-wrap gap-5 justify-center items-start mt-7 md:flex-row md:justify-start">
+          {cardUI}
         </div>
       </section>
 
