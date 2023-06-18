@@ -394,7 +394,7 @@ export default function LandingPage() {
           </p>
           <div className="flex flex-col items-center md:items-start gap-5 font-robotomono text-sm md:text-lg">
             {/* telp */}
-            <div className="flex flex-col items-center gap-2 md:flex-row">
+            {/* <div className="flex flex-col items-center gap-2 md:flex-row">
               <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -408,7 +408,7 @@ export default function LandingPage() {
                 </svg>
               </div>
               <p>+6285293472288</p>
-            </div>
+            </div> */}
             {/* email */}
             <div className="flex flex-col items-center gap-2 md:flex-row">
               <div>
