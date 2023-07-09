@@ -2,26 +2,26 @@ import Images from "../assets/Image";
 
 const Data = [
   {
-    id: "fe1",
-    gambar: Images.projectFe1,
-    judul: "Slicing Design Suxz",
-    deskripsi: "Slicing UI Design dari website Codedesign.dev ",
-    href: "https://codedesign.dev/challenge/suxz",
-    responsive: "Responsive : Ya",
-    tech: "Teknologi : React JS, Tailwind CSS",
-    web: "https://slicing-suxz.netlify.app/",
-    github: "https://github.com/FarhanZain/Slicing-Design-Suxz.git",
-  },
-  {
     id: "fe2",
     gambar: Images.projectFe2,
     judul: "Slicing Design Bubble Bash",
-    deskripsi: "Slicing UI Design dari website Codedesign.dev ",
+    deskripsi: "Slicing UI Design dari website Codedesign.dev",
     href: "https://codedesign.dev/challenge/bubble-bash",
     responsive: "Responsive : Ya",
     tech: "Teknologi : React JS, Tailwind CSS",
     web: "https://slicing-bubble-bash.netlify.app/",
     github: "https://github.com/FarhanZain/massive-farhan-siang.git",
+  },
+  {
+    id: "fe1",
+    gambar: Images.projectFe1,
+    judul: "Slicing Design Suxz",
+    deskripsi: "Slicing UI Design dari website codedesign.dev",
+    href: "https://codedesign.dev/challenge/suxz",
+    responsive: "Responsive : Ya",
+    tech: "Teknologi : React JS, Tailwind CSS",
+    web: "https://slicing-suxz.netlify.app/",
+    github: "https://github.com/FarhanZain/Slicing-Design-Suxz.git",
   },
   {
     id: "fe3",

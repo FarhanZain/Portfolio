@@ -7,8 +7,11 @@ export default function CardUI(props) {
   return (
     <>
       <button
-        onClick={() => setOpen(true)}
-        className="p-5 rounded-xl shadow-lg w-[270px] cursor-pointer"
+        onClick={() => {
+          setOpen(true);
+          document.body.style.overflow = "hidden";
+        }}
+        className="p-5 rounded-xl shadow-lg w-[270px] bg-white hover:bg-gradient-to-b from-[#ECE9FF] to-[#F1FDFF] cursor-pointer"
       >
         <img
           className="w-full bg-slate-600 rounded-lg"
@@ -21,14 +24,26 @@ export default function CardUI(props) {
         </h1>
       </button>
 
-      <Modal open={open} onClose={() => setOpen(false)}>
+      <Modal
+        open={open}
+        onClose={() => {
+          setOpen(false);
+          document.body.style.overflow = "unset";
+        }}
+      >
         {/* <!-- Modal body --> */}
-        <div className="p-6 space-y-3">
-          <img className="w-full rounded-lg" src={props.gambar} alt="" />
-          <h1 className="text-lg font-righteous font-medium">{props.Judul}</h1>
-          <p className="text-base font-robotomono leading-relaxed text-black ">
-            {props.deskripsi}
-          </p>
+        <div className="p-6 space-y-3 lg:space-y-0 space-x-0 lg:space-x-8 flex flex-col lg:flex-row">
+          <div className="w-full lg:w-1/2">
+            <img className="rounded-lg" src={props.gambar} alt="" />
+          </div>
+          <div className="w-full lg:w-1/2">
+            <h1 className="text-lg lg:text-2xl mb-5 font-righteous font-medium">
+              {props.Judul}
+            </h1>
+            <p className="text-base font-robotomono leading-relaxed text-black ">
+              {props.deskripsi}
+            </p>
+          </div>
         </div>
 
         {/* <!-- Modal footer --> */}

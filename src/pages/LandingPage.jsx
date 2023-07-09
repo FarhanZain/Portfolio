@@ -2,7 +2,6 @@ import Navbar from "../component/Navbar";
 import Image from "../assets/Image";
 import CardIntro from "../component/CardIntro";
 import CardProject from "../component/CardProject";
-import Modal from "../component/Modal";
 import Data from "./Data";
 import DataUI from "./DataUI";
 import CardUI from "../component/CardUI";
@@ -157,9 +156,18 @@ export default function LandingPage() {
               Backend web, dan softskill seperti leadership, public speaking,
               dan management team.
             </p>
-            <p>- Micro Project sebagai UI/UX Designer (Hipster)</p>
-            <p>- Macro Project sebagai Coder Front-end (Hacker)</p>
-            <p>- Massive Project sebagai UI/UX Designer (Hipster)</p>
+            <p className="text-sm md:text-base font-robotomono font-semibold text-hitam mt-3">
+              Berikut project yang dikerjakan :
+            </p>
+            <p className="text-sm md:text-base font-robotomono text-hitam">
+              - Micro Project sebagai UI/UX Designer (Hipster)
+            </p>
+            <p className="text-sm md:text-base font-robotomono text-hitam">
+              - Macro Project sebagai Coder Front-end (Hacker)
+            </p>
+            <p className="text-sm md:text-base font-robotomono text-hitam">
+              - Massive Project sebagai UI/UX Designer (Hipster)
+            </p>
           </li>
         </ol>
       </section>
@@ -182,12 +190,12 @@ export default function LandingPage() {
               HTML dan CSS, untuk JS, React JS, dan Tailwind saya bisa
               menggunakannya dan masih mempelajari lebih dalam.
             </p>
-            <div className="flex justify-between items-center mt-4 md:justify-start md:gap-8">
+            <div className="flex justify-around items-center mt-4 md:justify-start md:gap-8">
               {/* html */}
               <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-[35px] h-[35px] md:w-[50px] md:h-[50px]"
+                  className="w-[40px] h-[40px] md:w-[50px] md:h-[50px]"
                   viewBox="0 0 256 256"
                 >
                   <g fill="none">
@@ -207,7 +215,7 @@ export default function LandingPage() {
               <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-[35px] h-[35px] md:w-[50px] md:h-[50px]"
+                  className="w-[40px] h-[40px] md:w-[50px] md:h-[50px]"
                   viewBox="0 0 256 256"
                 >
                   <g fill="none">
@@ -227,7 +235,7 @@ export default function LandingPage() {
               <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-[35px] h-[35px] md:w-[50px] md:h-[50px]"
+                  className="w-[40px] h-[40px] md:w-[50px] md:h-[50px]"
                   viewBox="0 0 256 256"
                 >
                   <g fill="none">
@@ -243,7 +251,7 @@ export default function LandingPage() {
               <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-[35px] h-[35px] md:w-[50px] md:h-[50px]"
+                  className="w-[40px] h-[40px] md:w-[50px] md:h-[50px]"
                   viewBox="0 0 256 256"
                 >
                   <g fill="none">
@@ -277,7 +285,7 @@ export default function LandingPage() {
               <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-[35px] h-[35px] md:w-[50px] md:h-[50px]"
+                  className="w-[40px] h-[40px] md:w-[50px] md:h-[50px]"
                   viewBox="0 0 256 256"
                 >
                   <g fill="none">
@@ -318,7 +326,7 @@ export default function LandingPage() {
               <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-[35px] h-[35px] md:w-[50px] md:h-[50px]"
+                  className="w-[40px] h-[40px] md:w-[50px] md:h-[50px]"
                   viewBox="0 0 256 256"
                 >
                   <g fill="none">
@@ -366,7 +374,7 @@ export default function LandingPage() {
         <h1 className="font-righteous text-primary text-xl md:text-2xl text-center md:text-start">
           Project <br className="md:hidden" /> Front-end
         </h1>
-        <div className="flex flex-wrap gap-5 justify-center items-start mt-7 md:flex-row md:justify-start">
+        <div className="flex flex-wrap gap-5 justify-center items-stretch mt-7 md:flex-row md:justify-start">
           {cardFe}
         </div>
       </section>
@@ -375,7 +383,7 @@ export default function LandingPage() {
         <h1 className="font-righteous text-primary text-xl md:text-2xl text-center md:text-start">
           Project <br className="md:hidden" /> UI/UX
         </h1>
-        <div className="flex flex-wrap gap-5 justify-center items-start mt-7 md:flex-row md:justify-start">
+        <div className="flex flex-wrap gap-5 justify-center items-stretch mt-7 md:flex-row md:justify-start">
           {cardUI}
         </div>
       </section>
@@ -386,61 +394,55 @@ export default function LandingPage() {
         className="px-[30px] py-[30px] md:px-[100px] md:py-[70px] mt-10 bg-gradient-to-b from-[#ECE9FF] to-[#F1FDFF]"
       >
         <div className="flex flex-col items-center gap-12 md:flex-row md:justify-between">
-          <h1 className="text-primary font-pacifico text-4xl md:text-5xl">
+          <a
+            href="#"
+            className="text-primary font-pacifico text-4xl md:text-5xl"
+          >
             Farhan
-          </h1>
-          <p className="font-robotomono text-[15px] md:text-xl text-center md:w-[300px] md:text-start">
+          </a>
+          <p className="font-robotomono text-[15px] md:text-xl text-center md:w-[400px] md:text-center">
             "Kegagalan adalah jalan memutar, bukan jalan buntu."
           </p>
-          <div className="flex flex-col items-center md:items-start gap-5 font-robotomono text-sm md:text-lg">
-            {/* telp */}
-            {/* <div className="flex flex-col items-center gap-2 md:flex-row">
-              <div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-[35px] h-[35px] md:w-[40px] md:h-[40px] text-primary"
-                  viewBox="0 0 1536 1536"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M1280 1065q0-11-2-16t-18-16.5t-40.5-25T1172 981t-45.5-25t-28.5-15q-5-3-19-13t-25-15t-21-5q-15 0-36.5 20.5t-39.5 45t-38.5 45T885 1039q-7 0-16.5-3.5T853 1029t-17-9.5t-14-8.5q-99-55-170-126.5T525 714q-2-3-8.5-14t-9.5-17t-6.5-15.5T497 651q0-13 20.5-33.5t45-38.5t45-39.5T628 503q0-10-5-21t-15-25t-13-19q-3-6-15-28.5T555 364t-26.5-47.5t-25-40.5t-16.5-18t-16-2q-48 0-101 22q-46 21-80 94.5T256 503q0 16 2.5 34t5 30.5t9 33t10 29.5t12.5 33t11 30q60 164 216.5 320.5T843 1230q6 2 30 11t33 12.5t29.5 10t33 9t30.5 5t34 2.5q57 0 130.5-34t94.5-80q22-53 22-101zm256-777v960q0 119-84.5 203.5T1248 1536H288q-119 0-203.5-84.5T0 1248V288Q0 169 84.5 84.5T288 0h960q119 0 203.5 84.5T1536 288z"
-                  />
-                </svg>
-              </div>
-              <p>+6285293472288</p>
-            </div> */}
+          <div className="flex flex-wrap md:flex-row items-center gap-5 font-robotomono">
             {/* email */}
-            <div className="flex flex-col items-center gap-2 md:flex-row">
-              <div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-[35px] h-[35px] md:w-[40px] md:h-[40px] text-primary"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M13.333 0H2.667A2.675 2.675 0 0 0 0 2.667v10.666C0 14.8 1.2 16 2.667 16h10.666C14.801 16 16 14.8 16 13.333V2.667A2.674 2.674 0 0 0 13.333 0zM4 4h8c.143 0 .281.031.409.088L8 9.231L3.591 4.088A.982.982 0 0 1 4 4zm-1 7V5l.002-.063l2.932 3.421l-2.9 2.9A.967.967 0 0 1 3 11zm9 1H4c-.088 0-.175-.012-.258-.034L6.588 9.12l1.413 1.648L9.414 9.12l2.846 2.846a.967.967 0 0 1-.258.034zm1-1c0 .088-.012.175-.034.258l-2.9-2.9l2.932-3.421L13 5v6z"
-                  />
-                </svg>
-              </div>
-              <p>farhanabdurrahmanzain@gmail.com</p>
-            </div>
-            {/* linked in */}
-            <div className="flex flex-col items-center gap-2 md:flex-row">
-              <div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-[35px] h-[35px] md:w-[40px] md:h-[40px] text-primary"
-                  viewBox="0 0 1536 1536"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M237 1286h231V592H237v694zm246-908q-1-52-36-86t-93-34t-94.5 34t-36.5 86q0 51 35.5 85.5T351 498h1q59 0 95-34.5t36-85.5zm585 908h231V888q0-154-73-233t-193-79q-136 0-209 117h2V592H595q3 66 0 694h231V898q0-38 7-56q15-35 45-59.5t74-24.5q116 0 116 157v371zm468-998v960q0 119-84.5 203.5T1248 1536H288q-119 0-203.5-84.5T0 1248V288Q0 169 84.5 84.5T288 0h960q119 0 203.5 84.5T1536 288z"
-                  />
-                </svg>
-              </div>
-              <p>Farhan Abdurrahman Zain</p>
-            </div>
+
+            <a
+              href="mailto:farhanabdurrahmanzain@gmail.com"
+              target="_blank"
+              className="w-[40px] md:w-[50px] hover:scale-125 transition duration-150 ease-in-out"
+            >
+              <img src={Image.gmailLogo} alt="Gmail Logo" />
+            </a>
+
+            {/* linkedin */}
+
+            <a
+              href="https://linkedin.com/in/farhan-abdurrahman-zain"
+              target="_blank"
+              className="w-[40px] md:w-[50px] hover:scale-125 transition duration-150 ease-in-out"
+            >
+              <img src={Image.linkedinLogo} alt="Linkedin Logo" />
+            </a>
+
+            {/* github */}
+
+            <a
+              href="https://github.com/FarhanZain"
+              target="_blank"
+              className="w-[40px] md:w-[50px] hover:scale-125 transition duration-150 ease-in-out"
+            >
+              <img src={Image.githubLogo} alt="Github Logo" />
+            </a>
+
+            {/* ig */}
+
+            <a
+              href="https://www.instagram.com/farhanzainnn_/"
+              target="_blank"
+              className="w-[40px] md:w-[50px] hover:scale-125 transition duration-150 ease-in-out"
+            >
+              <img src={Image.igLogo} alt="Gmail Logo" />
+            </a>
           </div>
         </div>
       </footer>

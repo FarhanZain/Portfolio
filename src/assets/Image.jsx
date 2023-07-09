@@ -7,6 +7,10 @@ const Images = {
   projectUI2: new URL("./ui2.png", import.meta.url).href,
   projectUI3: new URL("./ui3.png", import.meta.url).href,
   projectUI4: new URL("./ui4.png", import.meta.url).href,
+  gmailLogo: new URL("./gmail.png", import.meta.url).href,
+  linkedinLogo: new URL("./linkedin.png", import.meta.url).href,
+  githubLogo: new URL("./github.png", import.meta.url).href,
+  igLogo: new URL("./ig.png", import.meta.url).href,
 };
 
 export default Images;

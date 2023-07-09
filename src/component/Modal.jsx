@@ -11,7 +11,7 @@ export default function Modal({ open, onClose, children }) {
       >
         <div
           onClick={(e) => e.stopPropagation()}
-          className="relative w-full max-w-2xl max-h-full"
+          className="relative w-full max-w-4xl max-h-full"
         >
           {/* <!-- Modal content --> */}
           <div className="relative bg-white rounded-lg shadow">
